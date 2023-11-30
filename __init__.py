@@ -19,7 +19,8 @@ except:
 # --- Testing --- #
 
 if __name__ == "__main__":
-    
+
+    import sys
     from dataclasses import asdict
     
     artist = Artist("Bob Wills & His Texas Playboys",
@@ -35,10 +36,10 @@ if __name__ == "__main__":
     record = Record(**asdict(album))
     playlist2 = Playlist(**asdict(album))
 
-    print(artist)
-    print(song)
-    print(album)
-    print(playlist)
-    print(record)
-    print(playlist2)
+    print(artist, f"{sys.getsizeof(artist)} b")
+    print(song, f"{sys.getsizeof(song)} b")
+    print(album, f"{sys.getsizeof(album)} b")
+    print(playlist, f"{sys.getsizeof(playlist)} b")
+    print(record, f"{sys.getsizeof(record)} b")
+    print(playlist2, f"{sys.getsizeof(playlist2)} b")
     print(artist.genre)

@@ -22,7 +22,7 @@ __all__ = ("Song",)
 
 # --- Song Class --- #
 
-@dataclass(frozen = True)
+@dataclass(frozen = True, slots = True)
 class Song:
     name: str
     artist: Artist

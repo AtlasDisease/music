@@ -17,7 +17,7 @@ __all__ = ("Artist",)
 
 # --- Artist Class --- #
 
-@dataclass
+@dataclass(slots = True)
 class Artist:
     name: str
     genre: Genre = field(default = Genre.OTHER)

@@ -27,7 +27,7 @@ __all__ = ("Album", "Playlist", "Record",)
 
 # --- Album Class --- #
 
-@dataclass
+@dataclass(slots = True)
 class Album:
     name: str
     artist: Artist
@@ -48,13 +48,14 @@ class Album:
 
 # --- Record Class --- #
 
+@dataclass(slots = True)
 class Record(Album):
     pass
 
 
 # --- Playlist Class --- #
 
-@dataclass
+@dataclass(slots = True)
 class Playlist(Album):
     desc: str = ""
 
